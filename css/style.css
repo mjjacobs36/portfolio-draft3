@@ -1,0 +1,257 @@
+
+* {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.skip {
+    position: absolute;
+    left: -500px
+}
+
+.skip:focus {
+    left: 10px;
+}
+
+nav {
+    margin-top: 30px;
+    text-align: right;
+}
+
+nav li{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    border-bottom: solid 2px black;
+}
+
+nav li a {
+    color: black;
+}
+
+.active {
+    border: solid red 3px;
+}
+
+.active, .active a {
+    background-color: black;
+}
+
+img {
+    width: 300px;
+    display: inline-block;
+    padding: 15px;
+    margin: 20px 10px;
+    border: solid black 3px;
+    border-radius: 10px;
+    background-color: grey;
+}
+
+img:nth-child(2n +1) {
+    border: dotted white 4px;
+    background-color: black;
+}
+
+img:hover:not(#flag) {
+    background-color: red;
+}
+
+.active a {
+    color: white;
+}
+
+h1 {
+    font-size: 200%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+}
+
+input, textarea {
+    display: block;
+    margin-bottom: 10px;
+    font-family: "Merriweather", serif;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+/*index.html*/
+
+.overview {
+    margin: 30px;
+    text-align: center;
+}
+
+.overview h2, .images h2 {
+    font-size: 150%;
+    font-family: 'Merriweather', serif;
+}
+
+.overview p {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 15px;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-basis: 300px;
+}
+
+.gallery_title {
+    text-align: center;
+    font-size: 150%;
+    font-family: 'Merriweather', serif;
+}
+
+#background_img {
+    background-image: url("../images/background_adrien-olichon-_GH9LwhlSO4-unsplash.jpg");
+    background-color: #000;
+    background-size: 100%;
+    height: auto;
+    width: 100%;
+}
+
+#background_img h1 {
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+footer h3, fieldset {
+    font-family: "Merriweather", serif;
+    margin: 30px;
+}
+
+
+
+footer h3{
+    padding-top: 20px;
+}
+
+legend {
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-family: "Merriweather", serif;
+    padding-top: 30px;
+    text-align: right;
+    font-size: 75%;
+}
+
+label, input, textarea {
+    font-size: 90%;
+}
+
+/* Venue pages */
+
+#smvBackground {
+    background-image: url(../images/ryan-moreno-w1_4YH5IhDg-unsplash.jpg);
+    background-color: #000;
+    background-size: 100%;
+    height: 200px;
+    width: 100%;
+    color: #fff;
+    padding: 80px 0;
+}
+
+.intro, .venue_details p {
+    font-family: "Roboto", sans-serif;
+    padding: 20px 10px;
+}
+
+.sub_venue_type {
+    font-family: "Merriweather", serif;
+    margin: 20px 10px;
+
+}
+
+.sub_venue_type {
+    font-size: 150%;
+    font-weight: 700;
+    margin: 20px 10px;
+    text-decoration: underline;
+}
+
+.venues .venue_details h3, .venues .venue_details h2 {
+    font-size: 125%;
+    margin-left: 10px;
+    font-weight: 700;
+    font-family: "Merriweather", serif;
+}
+
+/* Grid */
+
+.venue_img {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.venue_details, .sub_venue_type, .intro {
+    text-align: center;
+}
+
+/* Large venues */
+
+#lg_venue_background {
+    background-image: url(../images/paulina-milde-jachowska-m6OzmW0GrPk-unsplash.jpg);
+    background-color: #000;
+    background-size: 100%;
+    height: 200px;
+    width: 100%;
+    color: #fff;
+    padding: 80px 0;
+}
+
+/* Specialty venues */
+
+#special_venue_background {
+    background-image: url(../images/becca-romine-Lll4QeybDEg-unsplash.jpg);
+    background-color: #000;
+    background-size: 100%;
+    height: 200px;
+    width: 100%;
+    color: #fff;
+    padding: 80px 0;
+}
+
+/* Animation */
+
+@keyframes animate_flags {
+    from {opacity:0;}
+    to {opacity: 100%;}
+}
+
+.animation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#flag, #flag_a {
+    padding: 0;
+    border: solid 1px #000;
+    border-radius: 0%;
+    height: auto;
+    width: 100px;
+    animation-name: animate_flags;
+    animation-duration: 6s;
+    animation-timing-function: ease;
+}
